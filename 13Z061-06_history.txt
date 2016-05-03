@@ -1,0 +1,33 @@
+===== [ History of fileset ART/13Z061-06/13Z061-06 ] =====
+
+
+-----[ Revision 1.5 ]-----
+[ 2009-09-02 10:37:28 by MRoth ]
+13z06106.xml:
+R: Porting to MDIS5
+M: fixed description for MDIS5
+
+-----[ Revision 1.4 ]-----
+[ 2009-07-10 14:24:37 by CRuff ]
+R: Porting to MDIS5: backwards compatibility to MDIS4 (Linux)
+M: added defines for new MDIS5 types
+
+-----[ Revision 1.3 ]-----
+[ 2009-03-02 16:02:42 by MRoth ]
+ fixed: section api_functions: renamed function names to Z61_*()
+ R: no 64 Bit support
+ M: changed set/getstat and path type to support 64 Bit
+13z06106.xml:
+ R: 1. device was not found in WIN environments (name did not match)
+    2. XML knows CHAM V2 dev ID as well now
+ M: 1. add mandatory 16 as begin of HWNAME (match with chameleon.h string)
+    2. add chamv2id as autoid
+
+-----[ Revision 1.2 ]-----
+[ 2006-06-08 16:45:11 by cs ]
+changed ADDRSPACE_SIZE to 16 (Chameleon BBIS reports real size now)
+
+-----[ Revision 1.1 ]-----
+[ 2006-01-30 12:19:43 by rla ]
+Initial Revision
+
