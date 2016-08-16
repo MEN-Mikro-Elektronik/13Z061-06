@@ -161,7 +161,7 @@ static int32 Z61_Init(
 	}
 
 	/* write initial value to PWM PERIOD register */
-	MWRITE_D16( llHdl->ma, Z061_PERIOD_ADDR_OFFSET, (u_int16)value );
+	MWRITE_D32(llHdl->ma, Z061_PERIOD_ADDR_OFFSET, (u_int16)value);
 
 	value = 0;
 
@@ -175,7 +175,7 @@ static int32 Z61_Init(
 	}
 
 	/* write initial value to PWM PULSE register */
-	MWRITE_D16( llHdl->ma, Z061_PULSE_ADDR_OFFSET, (u_int16)value );
+	MWRITE_D32(llHdl->ma, Z061_PULSE_ADDR_OFFSET, (u_int16)value);
 
 	*llHdlP = llHdl;	/* set low-level driver handle */
 
@@ -265,7 +265,6 @@ static int32 Z61_SetStat(
 )
 {
 	int32 value	= (int32)value32_or_64;	/* 32bit value     */
-	//INT32_OR_64	valueP = value32_or_64;	/* stores 32/64bit pointer; not needed here */
 
 	int32 error = ERR_SUCCESS;
 
@@ -295,14 +294,14 @@ static int32 Z61_SetStat(
         |  set PERIOD register      |
         +--------------------------*/
         case Z061_PERIOD:
-            MWRITE_D16( llHdl->ma, Z061_PERIOD_ADDR_OFFSET, value);
-            break;
+			MWRITE_D32(llHdl->ma, Z061_PERIOD_ADDR_OFFSET, value);
+			break;
         /*--------------------------+
         |  set PULSE register       |
         +--------------------------*/
         case Z061_PULSE:
-            MWRITE_D16( llHdl->ma, Z061_PULSE_ADDR_OFFSET, value);
-            break;
+			MWRITE_D32(llHdl->ma, Z061_PULSE_ADDR_OFFSET, value);
+			break;
         /*--------------------------+
         |  (unknown)                |
         +--------------------------*/
@@ -338,7 +337,6 @@ static int32 Z61_GetStat(
 {
 	int32		*valueP	  = (int32*)value32_or_64P;		 /* pointer to 32bit value  */
 	INT32_OR_64	*value64P = value32_or_64P;		 		 /* stores 32/64bit pointer  */
-	//M_SG_BLOCK	*blk 	  = (M_SG_BLOCK*)value32_or_64P; /* stores block struct pointer; not needed here */
 
 	int32 error = ERR_SUCCESS;
 
