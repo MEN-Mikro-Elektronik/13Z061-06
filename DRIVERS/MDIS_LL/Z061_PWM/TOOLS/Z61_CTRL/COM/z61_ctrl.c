@@ -9,7 +9,11 @@
  *        $Date: $
  *    $Revision: $
  *
- *       \brief  Tool to control the 16Z061 PWM generator 
+ *       \brief  Tool to control the 16Z061-01 PWM generator 
+ *
+ *               Can also be used for 16Z061-00 but then the generated cycle
+ *               and pulse length is one system clock cycle longer than
+ *               configured and PWM signal can not be set to permanent low.
  *
  *     Required: libraries: mdis_api, usr_oss, usr_utl
  *    \switches  (none)
@@ -40,18 +44,13 @@
 #define ERR_PARAM		1
 #define ERR_FUNC		2
 #define DEF_CLK			33000000
-#define MIN_CYCLE_CLK	2
-#define MAX_CYCLE_CLK	65535
-#define MIN_PULSE_CLK	0
-#define MAX_PULSE_CLK	65535
-
-#define TODO_CALL 0
 
 /*--------------------------------------+
 |   GLOBALS                             |
 +--------------------------------------*/
 static MDIS_PATH G_path;
 static u_int32	 G_verbose;
+static u_int32	 G_verify;
 static int32	 G_cycleClkNibble;
 static int32	 G_pulseClkNibble;
 
@@ -70,7 +69,7 @@ static void PrintPwmSetting(int32 sysFreq, int32 cycleClk, int32 pulseClk);
 static void Usage(void)
 {
 	printf("Usage:    z61_ctrl <device> <opts> [<opts>]                              \n");
-	printf("Function: Control the 16Z061 PWM generator                               \n");
+	printf("Function: Control the 16Z061-01 PWM generator                               \n");
 	printf("Options:                                                     [default]   \n");
 	printf("    device      device name (e.g. pwm_1)                                 \n");
 	printf("--- specify PWM as time ---                                              \n");
@@ -85,13 +84,16 @@ static void Usage(void)
 	printf("--- OR perform endless PWM test ---                                      \n");
 	printf("    -t=<n>      PWM test until keypress:                                 \n");
 	printf("                1= sweep cycle length from min..max                      \n");
-	printf("                   with 50% pulse length                                 \n");
+	printf("                   with 50%% pulse length                                \n");
 	printf("                2= sweep pulse length from min..max                      \n");
 	printf("                   with max cycle length                                 \n");
-	printf("    -s=<n>      step width for loop..........................[2]         \n");
-	printf("    -d=<ms>     delay [ms] after each cycle/pulse change.....[0]         \n");
+	printf("    -s=<n>      step width for loop..........................[64]        \n");
+	printf("    -d=<ms>     delay [ms] after each cycle/pulse change.....[10]        \n");
 	printf("    -a=<n>      abort after n passes                                     \n");
 	printf("    -v          verbose output for PWM test                              \n");
+	printf("    -V=0,1      verify set cycle and pulse length                        \n");
+	printf("                0= abort on error                                        \n");
+	printf("                1= continue on error                                     \n");
 	printf("\n");
 	printf("(c)Copyright 2016 by MEN Mikro Elektronik GmbH (%s)\n", __DATE__);
 }
@@ -115,7 +117,7 @@ int main(int argc, char *argv[])
 	/*----------------------+
 	|  check arguments      |
 	+----------------------*/
-	if ((errstr = UTL_ILLIOPT("c=p=f=C=P=t=s=d=a=v?", buf))) {
+	if ((errstr = UTL_ILLIOPT("c=p=f=C=P=t=s=d=a=vV=?", buf))) {
 		printf("*** %s\n", errstr);
 		return ERR_PARAM;
 	}
@@ -148,14 +150,16 @@ int main(int argc, char *argv[])
 	cycleClk  = ((str = UTL_TSTOPT("C=")) ? atoi(str) : -1);
 	pulseClk  = ((str = UTL_TSTOPT("P=")) ? atoi(str) : -1);
 	test      = ((str = UTL_TSTOPT("t=")) ? atoi(str) : -1);
-	step      = ((str = UTL_TSTOPT("s=")) ? atoi(str) : 2);
-	delay     = ((str = UTL_TSTOPT("d=")) ? atoi(str) : 0);
+	step      = ((str = UTL_TSTOPT("s=")) ? atoi(str) : 64);
+	delay     = ((str = UTL_TSTOPT("d=")) ? atoi(str) : 10);
 	abort     = ((str = UTL_TSTOPT("a=")) ? atoi(str) : -1);
 	G_verbose = (UTL_TSTOPT("v") ? 1 : 0);
+	G_verify = ((str = UTL_TSTOPT("V=")) ? atoi(str) : -1);
 
 	/* further parameter checking */
 	if ((cycleUs == -1) && (cycleClk == -1) && (test == -1)) {
 		printf("*** error: -c=, -C= or -t= must be specified\n");
+		Usage();
 		return ERR_PARAM;
 	}
 
@@ -174,14 +178,12 @@ int main(int argc, char *argv[])
 		return ERR_PARAM;
 	}
 
-#if TODO_CALL
 	/*----------------------+
 	|  open path            |
 	+----------------------*/
 	if ((G_path = M_open(device)) < 0) {
 		return PrintError("open");
 	}
-#endif
 
 	printf("system clock frequency: %dHz\n", sysFreq);
 
@@ -225,10 +227,24 @@ int main(int argc, char *argv[])
 			G_cycleClkNibble = -1;
 			G_pulseClkNibble = -1;
 
+			loopcnt++;
+
 			switch (test){
 			/* sweep cycle length from min to max with 50% pulse length */
 			case 1:
-				for(cycleClk = MIN_CYCLE_CLK; cycleClk < MAX_CYCLE_CLK; cycleClk += step){
+				printf("=== pass %d === : sweep cycle length from min..[%d]..max with 50%% pulse length, delay=%d\n",
+					loopcnt, step, delay);
+				for(n = 0; n <= 0x10000; n += step){
+
+					/* cycle range: 2..0xffff */
+					if (n == 0){
+						cycleClk = 2;
+					}
+					else {
+						cycleClk = n - 1;
+						if (cycleClk <= 2)
+							continue;
+					}
 
 					/* compute pulse [clocks] */
 					pulseClk = cycleClk / 2;
@@ -247,11 +263,22 @@ int main(int argc, char *argv[])
 
 			/*  sweep pulse length from min to max with max cycle length */
 			case 2:
-				cycleClk = MAX_CYCLE_CLK;
+				printf("=== pass %d === : sweep pulse length from min..[%d]..max with max cycle length, delay=%d\n",
+					loopcnt, step, delay);
+				cycleClk = 0xffff;
 				if (ConfigPwm(-1, cycleClk, -1))
 					goto ABORT;
 
-				for (pulseClk = MIN_PULSE_CLK; pulseClk < MAX_PULSE_CLK; pulseClk += step) {
+				for (n=0; n <= 0x10000; n += step) {
+
+					/* pulse range: 0..0xffff */
+					if(n == 0)
+						pulseClk = 0;
+					else{
+						pulseClk = n - 1;
+						if(pulseClk == 0)
+							continue;
+					}
 
 					if (ConfigPwm(-1, -1, pulseClk))
 						goto ABORT;
@@ -273,7 +300,6 @@ int main(int argc, char *argv[])
 			}
 
 			/* abort after n turns */
-			loopcnt++;
 			if (abort && (loopcnt == abort))
 				run = 0;
 					
@@ -287,10 +313,8 @@ CLEANUP:
 	ret=ERR_OK;
 	
 ABORT:
-#if TODO_CALL
 	if (M_close(G_path) < 0)
 		ret = PrintError("close");
-#endif
 
 	return ret;
 }
@@ -339,16 +363,28 @@ static int32 Time2Clock(int32 sysFreq, int32 timeUs)
 */
 static int32 ConfigPwm(int32 sysFreq, int32 cycleClk, int32 pulseClk)
 {
+	int32 read;
+
 	if (cycleClk != -1){
 		if ((cycleClk > 0xffff) || (cycleClk == 0)) {
 			printf("*** error: cycleClk=%d not in range 1..65535\n", cycleClk);
 			return ERR_PARAM;
 		}
 
-#if TODO_CALL
 		if ((M_setstat(G_path, Z061_PERIOD, cycleClk)) < 0)
 			return PrintError("setstat Z061_PERIOD");
-#endif
+
+		if (G_verify != -1) {
+			if ((M_getstat(G_path, Z061_PERIOD, &read)) < 0)
+				return PrintError("getstat Z061_PERIOD");
+
+			if (read != cycleClk) {
+				printf("*** error: read cycleClk=0x%x differs from set cycleClk=0x%x\n",
+					read, cycleClk);
+				if (G_verify == 0)
+					return ERR_FUNC;
+			}
+		}
 	}
 
 	if (pulseClk != -1) {
@@ -356,10 +392,20 @@ static int32 ConfigPwm(int32 sysFreq, int32 cycleClk, int32 pulseClk)
 			printf("*** error: pulseClk=%d not in range 0..65535\n", pulseClk);
 			return ERR_PARAM;
 		}
-#if TODO_CALL
 		if ((M_setstat(G_path, Z061_PULSE, pulseClk)) < 0)
 			return PrintError("setstat Z061_PULSE");
-#endif
+
+		if (G_verify != -1) {
+			if ((M_getstat(G_path, Z061_PULSE, &read)) < 0)
+				return PrintError("getstat Z061_PULSE");
+
+			if (read != pulseClk) {
+				printf("*** error: read pulseClk=0x%x differs from set pulseClk=0x%x\n",
+					read, pulseClk);
+			if (G_verify == 0)
+				return ERR_FUNC;
+			}
+		}
 	}
 
 	if(sysFreq != -1)
@@ -410,6 +456,6 @@ static void PrintPwmSetting(int32 sysFreq, int32 cycleClk, int32 pulseClk)
 	}
 
 	if( print )
-		printf("PWM freq=%8dHz, duty=%3d%%, cycleUs=%7.2fus, pulseUs=%7.2fus, cycleClk=%5d, pulseClk=%5d\n",
+		printf("PWM freq=%8dHz, duty=%3d%%, cycleUs=%8.2fus, pulseUs=%8.2fus, cycleClk=%5d, pulseClk=%5d\n",
 			freq, duty, cycleUs, pulseUs, cycleClk, pulseClk );
 }
