@@ -344,9 +344,6 @@ static int32 Time2Clock(int32 sysFreq, int32 timeUs)
 {
 	int32	clock;
 
-//	time = clock * 1/sysFreq;
-//	clock = time * sysFreq;
-
 	clock = timeUs * (sysFreq / 1000000);
 	
 	return clock;
