@@ -17,18 +17,9 @@
  *     Required: libraries: mdis_api
  *     \switches (none)
  */
- /*-------------------------------[ History ]--------------------------------
- *
- * $Log: z61_simp.c,v $
- * Revision 1.2  2009/03/02 15:52:39  MRoth
- * R: no 64 Bit support
- * M: changed path type to support 64 Bit
- *
- * Revision 1.1  2006/01/30 12:19:11  rla
- * Initial Revision
  *
  *---------------------------------------------------------------------------
- * (c) Copyright 2006 by MEN mikro elektronik GmbH, Nuernberg, Germany
+ * Copyright (c) 2006-2019, MEN Mikro Elektronik GmbH
  ****************************************************************************/
 
 static const char RCSid[]="$Id: z61_simp.c,v 1.2 2009/03/02 15:52:39 MRoth Exp $";

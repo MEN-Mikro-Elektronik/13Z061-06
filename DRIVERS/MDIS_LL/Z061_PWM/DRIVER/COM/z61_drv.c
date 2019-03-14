@@ -12,22 +12,9 @@
  *
  *     \switches _ONE_NAMESPACE_PER_DRIVER_
  */
- /*-------------------------------[ History ]--------------------------------
- *
- * $Log: z61_drv.c,v $
- * Revision 1.3  2009/07/10 14:12:03  CRuff
- * R: unused variables cause compiler warnings for VxWorks
- * M: commented the unused variables
- *
- * Revision 1.2  2009/03/02 15:52:34  MRoth
- * R: no 64 Bit support
- * M: changed set/getstat to support 64 Bit
- *
- * Revision 1.1  2006/01/30 12:19:02  rla
- * Initial Revision
  *
  *---------------------------------------------------------------------------
- * (c) Copyright 2006 by MEN Mikro Elektronik GmbH, Nuernberg, Germany
+ * Copyright (c) 2006-2019, MEN Mikro Elektronik GmbH
  ****************************************************************************/
 
 #include "z61_int.h"

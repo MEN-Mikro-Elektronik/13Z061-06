@@ -13,22 +13,9 @@
  *    \switches  _ONE_NAMESPACE_PER_DRIVER_
  *               _LL_DRV_
  */
- /*-------------------------------[ History ]--------------------------------
- *
- * $Log: z61_int.h,v $
- * Revision 1.3  2009/03/02 15:52:37  MRoth
- * R: no 64 Bit support
- * M: changed set/getstat to support 64 Bit
- *
- * Revision 1.2  2006/06/01 17:11:19  cs
- * changed ADDRSPACE_SIZE to 16 (Chameleon BBIS reports real size)
- *
- * Revision 1.1  2006/01/30 12:19:03  rla
- * Initial Revision
- *
  *
  *---------------------------------------------------------------------------
- * (c) Copyright 2006 by MEN Mikro Elektronik GmbH, Nuremberg, Germany
+ * Copyright (c) 2006-2019, MEN Mikro Elektronik GmbH
  ****************************************************************************/
 
 #ifndef _Z61_INT_H

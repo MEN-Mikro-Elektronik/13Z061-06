@@ -13,18 +13,9 @@
  *    \switches  _ONE_NAMESPACE_PER_DRIVER_
  *               _LL_DRV_
  */
- /*-------------------------------[ History ]--------------------------------
- *
- * $Log: z61_drv.h,v $
- * Revision 3.2  2009/07/10 14:13:47  CRuff
- * R: Ensure backwards compatibility of driver to MDIS4 for Linux
- * M: added defines for types INT32_OR_64 and MDIS_PATH
- *
- * Revision 3.1  2006/01/30 12:19:14  rla
- * Initial Revision
  *
  *---------------------------------------------------------------------------
- * (c) Copyright 2006 by MEN mikro elektronik GmbH, Nuernberg, Germany
+ * Copyright (c) 2006-2019, MEN Mikro Elektronik GmbH
  ****************************************************************************/
 
 #ifndef _Z61_DRV_H

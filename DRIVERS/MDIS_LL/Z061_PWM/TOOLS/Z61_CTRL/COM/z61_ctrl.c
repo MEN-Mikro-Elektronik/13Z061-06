@@ -18,11 +18,9 @@
  *     Required: libraries: mdis_api, usr_oss, usr_utl
  *    \switches  (none)
  */
- /*-------------------------------[ History ]--------------------------------
  *
- * $Log: z61_ctrl.c,v $
  *---------------------------------------------------------------------------
- * (c) Copyright 2016 by MEN Mikro Elektronik GmbH, Nuremberg, Germany
+ * Copyright (c) 2016-2019, MEN Mikro Elektronik GmbH
  ****************************************************************************/
 
 /*--------------------------------------+

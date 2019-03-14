@@ -12,19 +12,9 @@
  *
  *     \switches -
  */
- /*-------------------------------[ History ]--------------------------------
- *
- * $Log: z61_doc.c,v $
- * Revision 1.2  2008/04/29 19:04:39  CSchuster
- * fixed:
- *   - section api_functions: renamed function names to Z61_*()
- *
- * Revision 1.1  2006/01/30 12:19:04  rla
- * Initial Revision
- *
  *
  *---------------------------------------------------------------------------
- * (c) Copyright 2006 by MEN Mikro Elektronik GmbH, Nuremberg, Germany
+ * Copyright (c) 2006-2019, MEN Mikro Elektronik GmbH
  ****************************************************************************/
 
 /*! \mainpage
