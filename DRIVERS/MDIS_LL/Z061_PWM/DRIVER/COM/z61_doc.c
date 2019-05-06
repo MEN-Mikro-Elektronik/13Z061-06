@@ -152,7 +152,7 @@
 Simple example for driver usage
 */
 
-/** \page dummy
+/** \page z61dummy MEN logo
   \menimages
 */
 
