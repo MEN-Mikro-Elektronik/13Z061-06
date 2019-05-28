@@ -18,7 +18,7 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="CalcPrintPeriodDuty"><param name="Name" value="CalcPrintPeriodDuty"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__simp_8c.html#a5"><param name="Name" value="z61_simp.c"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__simp_8c.html#a4"><param name="Name" value="z61_simp.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="CH_NUMBER"><param name="Name" value="CH_NUMBER"></OBJECT>
   <UL>
@@ -28,6 +28,10 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__drv_8c.html#a12"><param name="Name" value="z61_drv.c"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__int_8h.html#a21"><param name="Name" value="z61_int.h"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="ConfigPwm"><param name="Name" value="ConfigPwm"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__ctrl_8c.html#a12"><param name="Name" value="z61_ctrl.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="DBG_MYLEVEL"><param name="Name" value="DBG_MYLEVEL"></OBJECT>
   <UL>
@@ -45,13 +49,49 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__int_8h.html#a6"><param name="Name" value="z61_int.h"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="DEF_CLK"><param name="Name" value="DEF_CLK"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__ctrl_8c.html#a3"><param name="Name" value="z61_ctrl.c"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="descHdl"><param name="Name" value="descHdl"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structLL__HANDLE.html#m3"><param name="Name" value="LL_HANDLE"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="ERR_FUNC"><param name="Name" value="ERR_FUNC"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__ctrl_8c.html#a2"><param name="Name" value="z61_ctrl.c"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="ERR_OK"><param name="Name" value="ERR_OK"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__ctrl_8c.html#a0"><param name="Name" value="z61_ctrl.c"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="ERR_PARAM"><param name="Name" value="ERR_PARAM"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__ctrl_8c.html#a1"><param name="Name" value="z61_ctrl.c"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="FPGA_CLK_HZ"><param name="Name" value="FPGA_CLK_HZ"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__simp_8c.html#a2"><param name="Name" value="z61_simp.c"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="G_cycleClkNibble"><param name="Name" value="G_cycleClkNibble"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__ctrl_8c.html#a7"><param name="Name" value="z61_ctrl.c"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="G_path"><param name="Name" value="G_path"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__ctrl_8c.html#a4"><param name="Name" value="z61_ctrl.c"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="G_pulseClkNibble"><param name="Name" value="G_pulseClkNibble"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__ctrl_8c.html#a8"><param name="Name" value="z61_ctrl.c"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="G_verbose"><param name="Name" value="G_verbose"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__ctrl_8c.html#a5"><param name="Name" value="z61_ctrl.c"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="G_verify"><param name="Name" value="G_verify"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__ctrl_8c.html#a6"><param name="Name" value="z61_ctrl.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="Ident"><param name="Name" value="Ident"></OBJECT>
   <UL>
@@ -92,7 +132,8 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="main"><param name="Name" value="main"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__simp_8c.html#a6"><param name="Name" value="z61_simp.c"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__ctrl_8c.html#a14"><param name="Name" value="z61_ctrl.c"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__simp_8c.html#a5"><param name="Name" value="z61_simp.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="MDIS_PATH"><param name="Name" value="MDIS_PATH"></OBJECT>
   <UL>
@@ -108,15 +149,24 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="PrintError"><param name="Name" value="PrintError"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__simp_8c.html#a4"><param name="Name" value="z61_simp.c"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="RCSid"><param name="Name" value="RCSid"></OBJECT>
-  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__ctrl_8c.html#a10"><param name="Name" value="z61_ctrl.c"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__simp_8c.html#a3"><param name="Name" value="z61_simp.c"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="PrintPwmSetting"><param name="Name" value="PrintPwmSetting"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__ctrl_8c.html#a13"><param name="Name" value="z61_ctrl.c"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="Time2Clock"><param name="Name" value="Time2Clock"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__ctrl_8c.html#a11"><param name="Name" value="z61_ctrl.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="U_INT32_OR_64"><param name="Name" value="U_INT32_OR_64"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__drv_8h.html#a3"><param name="Name" value="z61_drv.h"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="Usage"><param name="Name" value="Usage"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__ctrl_8c.html#a9"><param name="Name" value="z61_ctrl.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="USE_IRQ"><param name="Name" value="USE_IRQ"></OBJECT>
   <UL>
@@ -151,6 +201,24 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__drv_8c.html#a8"><param name="Name" value="z61_drv.c"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__int_8h.html#a17"><param name="Name" value="z61_int.h"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__ctrl_8c.html"><param name="Name" value="z61_ctrl.c"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__ctrl_8c.html#a12"><param name="Name" value="ConfigPwm"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__ctrl_8c.html#a3"><param name="Name" value="DEF_CLK"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__ctrl_8c.html#a2"><param name="Name" value="ERR_FUNC"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__ctrl_8c.html#a0"><param name="Name" value="ERR_OK"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__ctrl_8c.html#a1"><param name="Name" value="ERR_PARAM"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__ctrl_8c.html#a7"><param name="Name" value="G_cycleClkNibble"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__ctrl_8c.html#a4"><param name="Name" value="G_path"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__ctrl_8c.html#a8"><param name="Name" value="G_pulseClkNibble"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__ctrl_8c.html#a5"><param name="Name" value="G_verbose"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__ctrl_8c.html#a6"><param name="Name" value="G_verify"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__ctrl_8c.html#a14"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__ctrl_8c.html#a10"><param name="Name" value="PrintError"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__ctrl_8c.html#a13"><param name="Name" value="PrintPwmSetting"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__ctrl_8c.html#a11"><param name="Name" value="Time2Clock"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__ctrl_8c.html#a9"><param name="Name" value="Usage"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__drv_8c.html"><param name="Name" value="z61_drv.c"></OBJECT>
   <UL>
@@ -250,11 +318,10 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__simp_8c.html"><param name="Name" value="z61_simp.c"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__simp_8c.html#a5"><param name="Name" value="CalcPrintPeriodDuty"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__simp_8c.html#a4"><param name="Name" value="CalcPrintPeriodDuty"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__simp_8c.html#a2"><param name="Name" value="FPGA_CLK_HZ"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__simp_8c.html#a6"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__simp_8c.html#a4"><param name="Name" value="PrintError"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__simp_8c.html#a3"><param name="Name" value="RCSid"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__simp_8c.html#a5"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__simp_8c.html#a3"><param name="Name" value="PrintError"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__simp_8c.html#a1"><param name="Name" value="Z61_FREQ_END"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="z61__simp_8c.html#a0"><param name="Name" value="Z61_FREQ_START"></OBJECT>
   </UL>

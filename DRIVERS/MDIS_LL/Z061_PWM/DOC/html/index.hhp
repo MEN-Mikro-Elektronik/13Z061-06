@@ -17,6 +17,7 @@ files.html
 z61__simp_8c-example.html
 z61__drv_8h-source.html
 z61__int_8h-source.html
+z61__ctrl_8c.html
 z61__doc_8c.html
 z61__drv_8c.html
 z61__drv_8h.html
@@ -25,7 +26,7 @@ z61__simp_8c.html
 annotated.html
 functions.html
 structLL__HANDLE.html
-dummy.html
+z61dummy.html
 examples.html
 globals.html
 pages.html

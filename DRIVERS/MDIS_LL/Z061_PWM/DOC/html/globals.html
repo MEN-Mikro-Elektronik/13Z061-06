@@ -11,7 +11,7 @@
 
 <div class="left_to_right" style="padding-top: 6px; background-color: #F0F0F0; height: 110px; border-bottom: 2px solid #D1D1D2;">
 	<!-- Titel -->
-	<img src="menlogo.gif" alt="MEN" style="float: left; height: 103px; width: 155px; margin: 0px;"></a>
+	<img src="menlogo.gif" alt="MEN" style="float: left; height: 103px; width: 155px; margin: 0px;">
 	<h1 style="margin: 0px; padding-top: 35px; padding-bottom: 0px;">Z61 MDIS Driver &nbsp; </h1>
 	<h3>File Member Index</h3>
 </div>
@@ -27,19 +27,31 @@
 : <a class="el" href="z61__int_8h.html#a0">z61_int.h</a><li>ADDRSPACE_COUNT
 : <a class="el" href="z61__int_8h.html#a3">z61_int.h</a><li>ADDRSPACE_SIZE
 : <a class="el" href="z61__int_8h.html#a4">z61_int.h</a><li>CalcPrintPeriodDuty()
-: <a class="el" href="z61__simp_8c.html#a5">z61_simp.c</a><li>CH_NUMBER
+: <a class="el" href="z61__simp_8c.html#a4">z61_simp.c</a><li>CH_NUMBER
 : <a class="el" href="z61__int_8h.html#a1">z61_int.h</a><li>Cleanup()
-: <a class="el" href="z61__int_8h.html#a21">z61_int.h</a>, <a class="el" href="z61__drv_8c.html#a12">z61_drv.c</a><li>DBG_MYLEVEL
+: <a class="el" href="z61__int_8h.html#a21">z61_int.h</a>, <a class="el" href="z61__drv_8c.html#a12">z61_drv.c</a><li>ConfigPwm()
+: <a class="el" href="z61__ctrl_8c.html#a12">z61_ctrl.c</a><li>DBG_MYLEVEL
 : <a class="el" href="z61__int_8h.html#a5">z61_int.h</a><li>DBH
-: <a class="el" href="z61__int_8h.html#a6">z61_int.h</a><li>FPGA_CLK_HZ
-: <a class="el" href="z61__simp_8c.html#a2">z61_simp.c</a><li>Ident()
+: <a class="el" href="z61__int_8h.html#a6">z61_int.h</a><li>DEF_CLK
+: <a class="el" href="z61__ctrl_8c.html#a3">z61_ctrl.c</a><li>ERR_FUNC
+: <a class="el" href="z61__ctrl_8c.html#a2">z61_ctrl.c</a><li>ERR_OK
+: <a class="el" href="z61__ctrl_8c.html#a0">z61_ctrl.c</a><li>ERR_PARAM
+: <a class="el" href="z61__ctrl_8c.html#a1">z61_ctrl.c</a><li>FPGA_CLK_HZ
+: <a class="el" href="z61__simp_8c.html#a2">z61_simp.c</a><li>G_cycleClkNibble
+: <a class="el" href="z61__ctrl_8c.html#a7">z61_ctrl.c</a><li>G_path
+: <a class="el" href="z61__ctrl_8c.html#a4">z61_ctrl.c</a><li>G_pulseClkNibble
+: <a class="el" href="z61__ctrl_8c.html#a8">z61_ctrl.c</a><li>G_verbose
+: <a class="el" href="z61__ctrl_8c.html#a5">z61_ctrl.c</a><li>G_verify
+: <a class="el" href="z61__ctrl_8c.html#a6">z61_ctrl.c</a><li>Ident()
 : <a class="el" href="z61__int_8h.html#a20">z61_int.h</a>, <a class="el" href="z61__drv_8c.html#a11">z61_drv.c</a><li>INT32_OR_64
 : <a class="el" href="z61__drv_8h.html#a2">z61_drv.h</a><li>main()
-: <a class="el" href="z61__simp_8c.html#a6">z61_simp.c</a><li>MDIS_PATH
+: <a class="el" href="z61__ctrl_8c.html#a14">z61_ctrl.c</a>, <a class="el" href="z61__simp_8c.html#a5">z61_simp.c</a><li>MDIS_PATH
 : <a class="el" href="z61__drv_8h.html#a4">z61_drv.h</a><li>PrintError()
-: <a class="el" href="z61__simp_8c.html#a4">z61_simp.c</a><li>RCSid
-: <a class="el" href="z61__simp_8c.html#a3">z61_simp.c</a><li>U_INT32_OR_64
-: <a class="el" href="z61__drv_8h.html#a3">z61_drv.h</a><li>USE_IRQ
+: <a class="el" href="z61__ctrl_8c.html#a10">z61_ctrl.c</a>, <a class="el" href="z61__simp_8c.html#a3">z61_simp.c</a><li>PrintPwmSetting()
+: <a class="el" href="z61__ctrl_8c.html#a13">z61_ctrl.c</a><li>Time2Clock()
+: <a class="el" href="z61__ctrl_8c.html#a11">z61_ctrl.c</a><li>U_INT32_OR_64
+: <a class="el" href="z61__drv_8h.html#a3">z61_drv.h</a><li>Usage()
+: <a class="el" href="z61__ctrl_8c.html#a9">z61_ctrl.c</a><li>USE_IRQ
 : <a class="el" href="z61__int_8h.html#a2">z61_int.h</a><li>Z061_CHANNEL_OFFSET
 : <a class="el" href="z61__int_8h.html#a9">z61_int.h</a><li>Z061_PERIOD
 : <a class="el" href="z61__drv_8h.html#a0">z61_drv.h</a><li>Z061_PERIOD_ADDR_OFFSET
@@ -67,9 +79,10 @@
 <!-- Footer -->
 	<p class="footer">
 	Generated for Z61 MDIS Driver using <a href="http://www.doxygen.org">doxygen</a>.<br>
-	Copyright &copy; 2008 <a href="http://www.men.de">MEN Mikro Elektronik GmbH</a>. All Rights Reserved.
+	Copyright &copy; 2019 <a href="http://www.men.de">MEN Mikro Elektronik GmbH</a>. All Rights Reserved.
 	</p>
 </div>
 
 </body>
 </html>
+

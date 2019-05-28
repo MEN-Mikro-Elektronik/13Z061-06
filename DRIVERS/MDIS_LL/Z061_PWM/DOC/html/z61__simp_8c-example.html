@@ -11,7 +11,7 @@
 
 <div class="left_to_right" style="padding-top: 6px; background-color: #F0F0F0; height: 110px; border-bottom: 2px solid #D1D1D2;">
 	<!-- Titel -->
-	<img src="menlogo.gif" alt="MEN" style="float: left; height: 103px; width: 155px; margin: 0px;"></a>
+	<img src="menlogo.gif" alt="MEN" style="float: left; height: 103px; width: 155px; margin: 0px;">
 	<h1 style="margin: 0px; padding-top: 35px; padding-bottom: 0px;">Z61 MDIS Driver &nbsp; </h1>
 	<h3>Example Documentation</h3>
 </div>
@@ -28,24 +28,20 @@
 <span class="comment"> ************                   Z61_SIMP                         ************</span>
 <span class="comment"> ************                                                    ************</span>
 <span class="comment"> ****************************************************************************/</span>
- <span class="comment">/*-------------------------------[ History ]--------------------------------</span>
+ <span class="comment">/*</span>
+<span class="comment"> * This program is free software: you can redistribute it and/or modify</span>
+<span class="comment"> * it under the terms of the GNU General Public License as published by</span>
+<span class="comment"> * the Free Software Foundation, either version 2 of the License, or</span>
+<span class="comment"> * (at your option) any later version.</span>
 <span class="comment"> *</span>
-<span class="comment"> * $Log: z61__simp_8c-example.html,v $
-<span class="comment"> * Revision 1.5  2009/09/02 10:34:45  MRoth
-<span class="comment"> * (AUTOCI) Checkin due to new revision 1.5 of fileset ART/13Z061-06/13Z061-06
+<span class="comment"> * This program is distributed in the hope that it will be useful,</span>
+<span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="comment"> * GNU General Public License for more details.</span>
 <span class="comment"> *</span>
-<span class="comment"> * Revision 1.2  2009/03/02 15:52:39  MRoth</span>
-<span class="comment"> * R: no 64 Bit support</span>
-<span class="comment"> * M: changed path type to support 64 Bit</span>
-<span class="comment"> *</span>
-<span class="comment"> * Revision 1.1  2006/01/30 12:19:11  rla</span>
-<span class="comment"> * Initial Revision</span>
-<span class="comment"> *</span>
-<span class="comment"> *---------------------------------------------------------------------------</span>
-<span class="comment"> * (c) Copyright 2006 by MEN mikro elektronik GmbH, Nuernberg, Germany</span>
-<span class="comment"> ****************************************************************************/</span>
-
-<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> RCSid[]=<span class="stringliteral">"$Id: z61__simp_8c-example.html,v 1.5 2009/09/02 10:34:45 MRoth Exp $"</span>;
+<span class="comment"> * You should have received a copy of the GNU General Public License</span>
+<span class="comment"> * along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+<span class="comment"> */</span>
 
 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
 <span class="preprocessor">#include &lt;string.h&gt;</span>
@@ -81,11 +77,11 @@
 <span class="comment">/*--------------------------------------+</span>
 <span class="comment">|   PROTOTYPES                          |</span>
 <span class="comment">+--------------------------------------*/</span>
-<span class="keyword">static</span> <span class="keywordtype">void</span> <a name="a0"></a><a class="code" href="z61__simp_8c.html#a4">PrintError</a>(<span class="keywordtype">char</span> *info);
-<span class="keyword">static</span> <span class="keywordtype">void</span> <a name="a1"></a><a class="code" href="z61__simp_8c.html#a5">CalcPrintPeriodDuty</a>( u_int16 period, u_int16 duty );
+<span class="keyword">static</span> <span class="keywordtype">void</span> <a name="a0"></a><a class="code" href="z61__simp_8c.html#a3">PrintError</a>(<span class="keywordtype">char</span> *info);
+<span class="keyword">static</span> <span class="keywordtype">void</span> <a name="a1"></a><a class="code" href="z61__simp_8c.html#a4">CalcPrintPeriodDuty</a>( u_int16 period, u_int16 duty );
 
 <span class="comment">/********************************* main ************************************/</span>
-<span class="keywordtype">int</span> <a name="a2"></a><a class="code" href="z61__simp_8c.html#a6">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[])
+<span class="keywordtype">int</span> <a name="a2"></a><a class="code" href="z61__simp_8c.html#a5">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[])
 {
     <a class="code" href="z61__drv_8h.html#a2">INT32_OR_64</a> path = 0;
     <span class="keywordtype">char</span>    *device;
@@ -111,8 +107,8 @@
     <span class="comment">/*--------------------+</span>
 <span class="comment">    |  open path          |</span>
 <span class="comment">    +--------------------*/</span>
-    <span class="keywordflow">if</span> ((path = M_open(device)) &lt; 0) {
-        <a class="code" href="z61__simp_8c.html#a4">PrintError</a>(<span class="stringliteral">"open"</span>);
+    <span class="keywordflow">if</span> ((path = <a name="a3"></a><a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a4">M_open</a>(device)) &lt; 0) {
+        <a class="code" href="z61__simp_8c.html#a3">PrintError</a>(<span class="stringliteral">"open"</span>);
         <span class="keywordflow">return</span>(1);
     }
 
@@ -121,8 +117,8 @@
 <span class="comment">    +--------------------*/</span>
     <span class="keywordflow">for</span>( period = <a class="code" href="z61__simp_8c.html#a0">Z61_FREQ_START</a>; period &lt; <a class="code" href="z61__simp_8c.html#a1">Z61_FREQ_END</a>; period ++ ){
         <span class="comment">/* set frequency */</span>
-        <span class="keywordflow">if</span>( (M_setstat( path, Z061_PERIOD, period ) ) ){
-            <a class="code" href="z61__simp_8c.html#a4">PrintError</a>(<span class="stringliteral">"setstat Z061_PERIOD"</span>);
+        <span class="keywordflow">if</span>( (<a name="a4"></a><a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a13">M_setstat</a>( path, Z061_PERIOD, period ) ) ){
+            <a class="code" href="z61__simp_8c.html#a3">PrintError</a>(<span class="stringliteral">"setstat Z061_PERIOD"</span>);
             error = 1;
             <span class="keywordflow">goto</span> abort;
         }
@@ -130,11 +126,11 @@
         <span class="keywordflow">for</span>( duty = 1 ; duty &lt; (period - 1); duty += (period / 20) ){
 
             <span class="comment">/* calculate and print duty cycle */</span>
-            <a class="code" href="z61__simp_8c.html#a5">CalcPrintPeriodDuty</a>( period, duty );
+            <a class="code" href="z61__simp_8c.html#a4">CalcPrintPeriodDuty</a>( period, duty );
 
             <span class="comment">/* set duty cycle */</span>
-            <span class="keywordflow">if</span>( (M_setstat( path, Z061_PULSE, duty ) ) ){
-                <a class="code" href="z61__simp_8c.html#a4">PrintError</a>(<span class="stringliteral">"setstat Z061_PULSE"</span>);
+            <span class="keywordflow">if</span>( (<a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a13">M_setstat</a>( path, Z061_PULSE, duty ) ) ){
+                <a class="code" href="z61__simp_8c.html#a3">PrintError</a>(<span class="stringliteral">"setstat Z061_PULSE"</span>);
                 error = 1;
                 <span class="keywordflow">goto</span> abort;
             }
@@ -146,8 +142,8 @@
             retry = 0;
             <span class="comment">/* read and compare duty */</span>
             <span class="keywordflow">do</span>{
-                <span class="keywordflow">if</span>( (M_getstat( path, Z061_PULSE, (int32*)&amp;temp ) ) ){
-                    <a class="code" href="z61__simp_8c.html#a4">PrintError</a>(<span class="stringliteral">"getstat Z061_PULSE"</span>);
+                <span class="keywordflow">if</span>( (<a name="a5"></a><a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a12">M_getstat</a>( path, Z061_PULSE, (int32*)&amp;temp ) ) ){
+                    <a class="code" href="z61__simp_8c.html#a3">PrintError</a>(<span class="stringliteral">"getstat Z061_PULSE"</span>);
                     error = 1;
                     <span class="keywordflow">goto</span> abort;
                 }
@@ -157,7 +153,7 @@
             }<span class="keywordflow">while</span>( (temp != duty) &amp;&amp; (retry++ &lt; 10) );
 
             <span class="keywordflow">if</span>( retry &gt;= 10 ){
-                <a class="code" href="z61__simp_8c.html#a4">PrintError</a>(<span class="stringliteral">"Duty mismatch"</span>);
+                <a class="code" href="z61__simp_8c.html#a3">PrintError</a>(<span class="stringliteral">"Duty mismatch"</span>);
                 error = 1;
                 <span class="keywordflow">goto</span> abort;
             }
@@ -166,14 +162,14 @@
         temp = 0;
 
         <span class="comment">/* read and compare period */</span>
-        <span class="keywordflow">if</span>( (M_getstat( path, Z061_PERIOD, (int32*)&amp;temp ) ) ){
-            <a class="code" href="z61__simp_8c.html#a4">PrintError</a>(<span class="stringliteral">"getstat Z061_PERIOD"</span>);
+        <span class="keywordflow">if</span>( (<a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a12">M_getstat</a>( path, Z061_PERIOD, (int32*)&amp;temp ) ) ){
+            <a class="code" href="z61__simp_8c.html#a3">PrintError</a>(<span class="stringliteral">"getstat Z061_PERIOD"</span>);
             error = 1;
             <span class="keywordflow">goto</span> abort;
         }
 
         <span class="keywordflow">if</span>( temp != period ){
-            <a class="code" href="z61__simp_8c.html#a4">PrintError</a>(<span class="stringliteral">"Period mismatch"</span>);
+            <a class="code" href="z61__simp_8c.html#a3">PrintError</a>(<span class="stringliteral">"Period mismatch"</span>);
             error = 1;
             <span class="keywordflow">goto</span> abort;
         }
@@ -183,17 +179,17 @@
 <span class="comment">    |  cleanup            |</span>
 <span class="comment">    +--------------------*/</span>
     abort:
-    <span class="keywordflow">if</span> (M_close(path) &lt; 0)
-        <a class="code" href="z61__simp_8c.html#a4">PrintError</a>(<span class="stringliteral">"close"</span>);
+    <span class="keywordflow">if</span> (<a name="a6"></a><a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a9">M_close</a>(path) &lt; 0)
+        <a class="code" href="z61__simp_8c.html#a3">PrintError</a>(<span class="stringliteral">"close"</span>);
 
     printf(<span class="stringliteral">"\n"</span>);
 
-    <span class="keywordflow">return</span>(0);
+    <span class="keywordflow">return</span>(error);
 }
 
 
 <span class="comment">/**************************** CalcPrintPeriodDuty **************************/</span>
-<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="z61__simp_8c.html#a5">CalcPrintPeriodDuty</a>( u_int16 period, u_int16 duty )
+<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="z61__simp_8c.html#a4">CalcPrintPeriodDuty</a>( u_int16 period, u_int16 duty )
 {
     u_int32 freq = 0;
     u_int32 dcycle = 0;
@@ -206,9 +202,9 @@
 }
 
 <span class="comment">/********************************* PrintError ******************************/</span>
-<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="z61__simp_8c.html#a4">PrintError</a>(<span class="keywordtype">char</span> *info)
+<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="z61__simp_8c.html#a3">PrintError</a>(<span class="keywordtype">char</span> *info)
 {
-    printf(<span class="stringliteral">"*** can't %s: %s\n"</span>, info, M_errstring(UOS_ErrnoGet()));
+    printf(<span class="stringliteral">"*** can't %s: %s\n"</span>, info, <a name="a7"></a><a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/m__errstr_8c.html#a0">M_errstring</a>(UOS_ErrnoGet()));
 }
 
 </pre></div>
@@ -219,9 +215,10 @@
 <!-- Footer -->
 	<p class="footer">
 	Generated for Z61 MDIS Driver using <a href="http://www.doxygen.org">doxygen</a>.<br>
-	Copyright &copy; 2008 <a href="http://www.men.de">MEN Mikro Elektronik GmbH</a>. All Rights Reserved.
+	Copyright &copy; 2019 <a href="http://www.men.de">MEN Mikro Elektronik GmbH</a>. All Rights Reserved.
 	</p>
 </div>
 
 </body>
 </html>
+

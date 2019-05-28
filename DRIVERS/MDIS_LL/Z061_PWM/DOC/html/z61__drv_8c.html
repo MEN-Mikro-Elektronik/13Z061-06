@@ -11,7 +11,7 @@
 
 <div class="left_to_right" style="padding-top: 6px; background-color: #F0F0F0; height: 110px; border-bottom: 2px solid #D1D1D2;">
 	<!-- Titel -->
-	<img src="menlogo.gif" alt="MEN" style="float: left; height: 103px; width: 155px; margin: 0px;"></a>
+	<img src="menlogo.gif" alt="MEN" style="float: left; height: 103px; width: 155px; margin: 0px;">
 	<h1 style="margin: 0px; padding-top: 35px; padding-bottom: 0px;">Z61 MDIS Driver &nbsp; </h1>
 	<h3>z61_drv.c File Reference</h3>
 </div>
@@ -64,7 +64,7 @@ Low-level driver for Z61 module.
 <p>
 Required: OSS, DESC, DBG, ID libraries<p>
 <dl compact><dt><b>Preprocessor Switches:</b></dt><dd>_ONE_NAMESPACE_PER_DRIVER_</dd></dl>
-<hr><h2>Function Documentation</h2>
+--------------------------------------------------------------------------- Copyright (c) 2006-2019, MEN Mikro Elektronik GmbH<hr><h2>Function Documentation</h2>
 <a name="a12" doxytag="z61_drv.c::Cleanup"></a><p>
 <table width="100%" cellpadding="2" cellspacing="0" border="0">
   <tr>
@@ -392,8 +392,8 @@ The driver supports <a class="el" href="z61__drv_8h.html#getstat_setstat_codes">
     <tr><td valign=top><em>llHdl</em>&nbsp;</td><td><b>IN</b> Low-level handle </td></tr>
     <tr><td valign=top><em>code</em>&nbsp;</td><td><b>IN</b> <a class="el" href="z61__drv_8h.html#getstat_setstat_codes">status code</a> </td></tr>
     <tr><td valign=top><em>ch</em>&nbsp;</td><td><b>IN</b> Current channel </td></tr>
-    <tr><td valign=top><em>value32_or_64P</em>&nbsp;</td><td><b>IN</b> Pointer to block data structure (M_SG_BLOCK) for block status codes </td></tr>
-    <tr><td valign=top><em>value32_or_64P</em>&nbsp;</td><td><b>OUT</b> Data pointer or pointer to block data structure (M_SG_BLOCK) for block status codes</td></tr>
+    <tr><td valign=top><em>value32_or_64P</em>&nbsp;</td><td><b>IN</b> Pointer to block data structure (<a class="elRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/structM__SG__BLOCK.html">M_SG_BLOCK</a>) for block status codes </td></tr>
+    <tr><td valign=top><em>value32_or_64P</em>&nbsp;</td><td><b>OUT</b> Data pointer or pointer to block data structure (<a class="elRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/structM__SG__BLOCK.html">M_SG_BLOCK</a>) for block status codes</td></tr>
   </table>
 </dl>
 <dl compact><dt><b>Returns:</b></dt><dd><code>0</code> On success or error code </dd></dl>
@@ -677,7 +677,7 @@ The driver supports <a class="el" href="z61__drv_8h.html#getstat_setstat_codes">
     <tr><td valign=top><em>llHdl</em>&nbsp;</td><td><b>IN</b> Low-level handle </td></tr>
     <tr><td valign=top><em>code</em>&nbsp;</td><td><b>IN</b> <a class="el" href="z61__drv_8h.html#getstat_setstat_codes">status code</a> </td></tr>
     <tr><td valign=top><em>ch</em>&nbsp;</td><td><b>IN</b> Current channel </td></tr>
-    <tr><td valign=top><em>value32_or_64</em>&nbsp;</td><td><b>IN</b> Data or pointer to block data structure (M_SG_BLOCK) for block status codes </td></tr>
+    <tr><td valign=top><em>value32_or_64</em>&nbsp;</td><td><b>IN</b> Data or pointer to block data structure (<a class="elRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/structM__SG__BLOCK.html">M_SG_BLOCK</a>) for block status codes </td></tr>
   </table>
 </dl>
 <dl compact><dt><b>Returns:</b></dt><dd><code>0</code> On success or error code </dd></dl>
@@ -739,9 +739,10 @@ Write a value to the device, not supported by this driver.
 <!-- Footer -->
 	<p class="footer">
 	Generated for Z61 MDIS Driver using <a href="http://www.doxygen.org">doxygen</a>.<br>
-	Copyright &copy; 2008 <a href="http://www.men.de">MEN Mikro Elektronik GmbH</a>. All Rights Reserved.
+	Copyright &copy; 2019 <a href="http://www.men.de">MEN Mikro Elektronik GmbH</a>. All Rights Reserved.
 	</p>
 </div>
 
 </body>
 </html>
+
