@@ -6,8 +6,6 @@
 /*!
  *         \file z61_simp.c
  *       \author rla
- *        $Date: 2009/03/02 15:52:39 $
- *    $Revision: 1.2 $
  *
  *       \brief  Simple example program for the Z61 driver
  *

@@ -6,8 +6,6 @@
 /*!
  *        \file  z61_ctrl.c
  *      \author  dieter.pfeuffer@men.de
- *        $Date: $
- *    $Revision: $
  *
  *       \brief  Tool to control the 16Z061-01 PWM generator 
  *
@@ -49,6 +47,8 @@
 #include <MEN/usr_oss.h>
 #include <MEN/usr_utl.h>
 #include <MEN/z61_drv.h>
+
+static const char IdentString[]=MENT_XSTR(MAK_REVISION);
 
 /*--------------------------------------+
 |   DEFINES                             |
@@ -108,7 +108,7 @@ static void Usage(void)
 	printf("                0= abort on error                                        \n");
 	printf("                1= continue on error                                     \n");
 	printf("\n");
-	printf("(c)Copyright 2016 by MEN Mikro Elektronik GmbH (%s)\n", __DATE__);
+	printf("Copyright (c) 2016-2019, MEN Mikro Elektronik GmbH\n%s\n", IdentString);
 }
 
 /***************************************************************************/

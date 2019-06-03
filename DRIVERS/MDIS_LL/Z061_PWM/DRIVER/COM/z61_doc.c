@@ -3,8 +3,6 @@
  *        \file  z61_doc.c
  *
  *      \author  rla
- *        $Date: 2008/04/29 19:04:39 $
- *    $Revision: 1.2 $
  *
  *      \brief   User documentation for Z61 module driver
  *

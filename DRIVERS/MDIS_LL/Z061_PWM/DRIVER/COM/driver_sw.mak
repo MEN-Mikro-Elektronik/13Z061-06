@@ -1,8 +1,6 @@
 #***************************  M a k e f i l e  *******************************
 #
 #         Author: rla
-#          $Date: 2006/01/30 12:19:06 $
-#      $Revision: 1.1 $
 #
 #    Description: Makefile definitions for the Z61 driver, swapped variant
 #
@@ -23,8 +21,13 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 MAK_NAME=z61_sw
+# the next line is updated during the MDIS installation
+STAMPED_REVISION="13Z061-06_01_06-9-g9f60fef-dirty_2019-05-30"
+
+DEF_REVISION=MAK_REVISION=$(STAMPED_REVISION)
 
 MAK_SWITCH=$(SW_PREFIX)MAC_MEM_MAPPED \
+		$(SW_PREFIX)$(DEF_REVISION) \
 		   $(SW_PREFIX)MAC_BYTESWAP \
 		   $(SW_PREFIX)Z61_SW \
 

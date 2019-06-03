@@ -3,8 +3,6 @@
  *        \file  z61_int.h
  *
  *      \author  rla
- *        $Date: 2009/03/02 15:52:37 $
- *    $Revision: 1.3 $
  *
  *       \brief  Header file for Z61 driver containing
  *               Z61 specific status codes and

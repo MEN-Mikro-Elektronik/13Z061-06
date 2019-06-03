@@ -3,8 +3,6 @@
  *        \file  z61_drv.c
  *
  *      \author  rla
- *        $Date: 2009/07/10 14:12:03 $
- *    $Revision: 1.3 $
  *
  *      \brief   Low-level driver for Z61 module
  *
