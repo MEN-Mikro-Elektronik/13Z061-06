@@ -32,6 +32,12 @@
 
 #include "z61_int.h"
 
+#ifdef MAC_BYTESWAP
+    static const char IdentString[]=MENT_XSTR_SFX(MAK_REVISION,(swapped))
+#else
+    static const char IdentString[]=MENT_XSTR_SFX(MAK_REVISION,(non swapped))
+#endif
+
 /****************************** Z61_GetEntry ********************************/
 /** Initialize driver's jump table
  *
@@ -585,13 +591,7 @@ static int32 Z61_Info(
  */
 static char* Ident( void )
 {
-    return( "Z61 - Z61 low-level driver: "
-#ifdef MAC_BYTESWAP
-    "swapped "
-#else
-    "non swapped "
-#endif
-"$Id: z61_drv.c,v 1.3 2009/07/10 14:12:03 CRuff Exp $" );
+    return( (char*) IdentString );
 }
 
 /********************************* Cleanup *********************************/
