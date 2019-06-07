@@ -33,9 +33,9 @@
 #include "z61_int.h"
 
 #ifdef MAC_BYTESWAP
-    static const char IdentString[]=MENT_XSTR_SFX(MAK_REVISION,(swapped))
+    static const char IdentString[]=MENT_XSTR_SFX(MAK_REVISION,(swapped));
 #else
-    static const char IdentString[]=MENT_XSTR_SFX(MAK_REVISION,(non swapped))
+    static const char IdentString[]=MENT_XSTR_SFX(MAK_REVISION,(non swapped));
 #endif
 
 /****************************** Z61_GetEntry ********************************/
