@@ -2,8 +2,8 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="packagedesc.xsd">
 	<name>13z06106</name>
 	<description>MDIS5 driver package for MEN Z61 PWM generator driver</description>
-	<date>2009-09-02</date>
-	<revision>1.5</revision>
+	<date>2019-06-07</date>
+	<revision>13Z061-06_01_06-13-gb973149</revision>
 	<docroot>DRIVERS/MDIS_LL/Z061_PWM/DOC/html/index.html</docroot>
 	<modellist>
 		<model>
