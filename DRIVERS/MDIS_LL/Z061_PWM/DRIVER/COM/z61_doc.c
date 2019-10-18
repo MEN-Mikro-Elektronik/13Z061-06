@@ -136,14 +136,6 @@
 
 	\subsection z61_simp  Simple example for using the driver
 	z61_simp.c (see example section)
-
-	\subsection z61_pwm_min   Minimum descriptor
-	z61_min.dsc
-	demonstrates the minimum set of options necessary for using the drver.
-
-	\subsection z61_pwm_max   Maximum descriptor
-	z61_max.dsc
-	shows all possible configuration options for this driver.
 */
 
 /** \example z61_simp.c
