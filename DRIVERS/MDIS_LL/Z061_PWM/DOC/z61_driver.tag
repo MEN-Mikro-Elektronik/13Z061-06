@@ -7,12 +7,10 @@
     <docanchor>codes</docanchor>
     <docanchor>Variants</docanchor>
     <docanchor>Documents</docanchor>
-    <docanchor>z61_pwm_min</docanchor>
     <docanchor>interrupts</docanchor>
     <docanchor>General</docanchor>
     <docanchor>api_functions</docanchor>
     <docanchor>FuncDesc</docanchor>
-    <docanchor>z61_pwm_max</docanchor>
     <docanchor>reading</docanchor>
     <docanchor>descriptor_entries</docanchor>
     <docanchor>z61_simp</docanchor>
