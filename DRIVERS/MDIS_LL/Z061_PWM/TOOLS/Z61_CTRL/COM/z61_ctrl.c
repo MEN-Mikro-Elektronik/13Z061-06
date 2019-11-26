@@ -18,7 +18,7 @@
  *
  *
  *---------------------------------------------------------------------------
- * Copyright (c) 2016-2019, MEN Mikro Elektronik GmbH
+ * Copyright 2016-2019, MEN Mikro Elektronik GmbH
  ****************************************************************************/
 
  /*
@@ -108,7 +108,7 @@ static void Usage(void)
 	printf("                0= abort on error                                        \n");
 	printf("                1= continue on error                                     \n");
 	printf("\n");
-	printf("Copyright (c) 2016-2019, MEN Mikro Elektronik GmbH\n%s\n", IdentString);
+	printf("Copyright 2016-2019, MEN Mikro Elektronik GmbH\n%s\n", IdentString);
 }
 
 /***************************************************************************/
